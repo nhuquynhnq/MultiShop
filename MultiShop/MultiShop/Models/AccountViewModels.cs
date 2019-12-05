@@ -42,6 +42,20 @@ namespace MultiShop.Models
         [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
     }
+      public class InputModel
+    {
+        [Required]
+        [Display(Name = "Country dialing code")]
+        public string DialingCode { get; set; }
+
+        [Required]
+        [Phone]
+        [Display(Name = "Phone number")]
+        public string PhoneNumber { get; set; }
+     
+        [Display(Name = "Code")]
+        public string VerificationCode { get; set; }
+    }
 
     public class RegisterViewModel
     {
